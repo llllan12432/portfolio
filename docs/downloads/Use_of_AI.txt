@@ -1,0 +1,69 @@
+Declaration of Generative AI Use
+Project Title: Akatsuki (Milestone 2)
+Student Name: (removed from public copy)
+Date: 11 April 2026
+
+1. AI Tools Used
+Claude (Anthropic, claude.ai)
+Doubao / Jimeng AI (image generation)
+AI voice synthesis (promotional video narration)
+
+2. Description of AI Usage
+
+Code Implementation:
+Claude was used extensively to implement game features based on my design
+specifications. In each case, I described the desired behaviour in natural
+language and Claude generated the corresponding Java code, which I then
+tested, debugged, and adjusted. Features implemented this way include: the
+multi-phase boss combat systems (Sasori, Itachi, Pain), gravity-switching
+mechanics in Level 3, the IronSand particle effect, the Meteor spawning
+system, the SaveSystem, the PauseMenu, and the Dialogue/NPC interaction
+system.
+
+Sample prompts used (extracted from conversation logs):
+
+  "Wanted pillars to slide in from left and right like Undertale, as solid
+  collidable bodies -- if the player doesn't jump they get pushed to the
+  edge and take damage, all within the combat boundary."
+
+  "Phase 2: large meteors fall from above; the blue soul in Pain's level
+  can have gravity direction switched (up/down/left/right); while gravity
+  is switching there are also explosions to dodge."
+
+  "Can the black-screen transition between phases be instant -- just a
+  flash of black then immediately the next attack pattern starts."
+
+Debugging:
+When bugs arose (e.g. the dialogue system freezing inside NPC sensor zones,
+double jump-land sound triggering, the dash sprite displaying the wrong GIF),
+I described the symptom to Claude and worked through the diagnosis together.
+In several cases I identified the root cause myself -- for example, a
+deleted else-if branch in the sensor logic, and a missing populate() call
+for food items -- and used Claude to confirm or implement the fix.
+
+Comments and Translation:
+Claude was used to write and translate all inline comments across Java files
+into bilingual (Chinese/English) format, and to translate in-game dialogue
+text. I reviewed all outputs before applying them.
+
+Assets:
+Game sprites and backgrounds were generated using Doubao/Jimeng AI or
+sourced from publicly available resources including opengameart.org, itch.io,
+and community sharing platforms. Audio assets were sourced from NetEase Music
+and other royalty-free sources. All assets are used for educational purposes
+only.
+
+Promotional Video:
+AI voice synthesis was used for narration in the two-minute showcase video.
+The script and game footage were produced by me.
+
+3. Reflection
+Using Claude significantly accelerated implementation, particularly for
+complex physics behaviours and timer-based game logic that would have taken
+much longer to write from scratch. However, the overall game design -- the
+choice of bosses, the structure of each combat phase, the visual style, and
+the progression between levels -- was entirely my own. Testing and tuning
+parameters (collision sizes, spawn rates, gravity values, timing) required
+repeated play-testing and manual adjustment that Claude could not do for me.
+This process deepened my understanding of how Java Timers, physics bodies,
+and listener patterns interact in practice.
